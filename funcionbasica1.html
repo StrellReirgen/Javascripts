@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Funcion Basica 1</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            function a(){
+                return 35;
+            }
+            console.log(a());
+            console.log("Mi Respuesta = 35");
+
+            function b(){
+                return 4;
+            }
+            console.log(b() + b());
+            console.log("Mi Respuesta = 8");
+
+            function c(b){
+                return b;
+            }
+            console.log(c(2) + c(4));
+            console.log("Mi Respuesta = 6");
+
+            function d(b){
+                console.log(b);
+                return b*3;
+            }
+            console.log(d(3));
+            console.log("Mi Respuesta = 3, 9");
+
+            function e(b){
+               return b*4;
+               console.log(b);
+            }
+            console.log(e(10));
+            console.log("Mi Respuesta = 40");
+
+            function f(b){
+                if(b<10) {
+                return 2;
+                }
+                else     {
+                return 4;
+                }
+                console.log(b);
+            }
+            console.log(f(15));
+            console.log("Mi Respuesta = 4");
+
+            function g(b,c){
+                return b*c;
+            }
+            console.log(10,3);
+            console.log( g(3,10) );
+            console.log("Mi Respuesta = 10, 3, 30");
+
+            function h(b){
+                for(var i=0; i<10; i++){
+                    console.log(i);
+                }
+                return i;
+            }
+            console.log(3);
+            console.log(4);
+            console.log("Mi Respuesta = 3, 4");
+
+            function i(){
+                for(var i=0; i<10; i++){
+                    i = i +2;
+                    console.log(i);
+                }
+            }
+            i();
+            console.log("Mi Respuesta = 2, 5, 8, 11");
+
+            function j(b,c){
+                for(var i=b; i<c; i++) {
+                   console.log(i);
+               }
+               return b*c;
+            }
+            j(0,10);
+            console.log(j(0,10));
+            console.log("Mi Respuesta = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0");
+
+            function k(){
+                for(var i=0; i<10; i++){
+                   for(var j=0; j<10; j++){
+                       console.log(j);
+                   }
+                       console.log(i);
+                }
+            }
+            console.log("Mi Respuesta = undefined");
+
+            function l(){
+                for(var i=0; i<10; i++){
+                    for(var j=0; j<10; j++){
+                        console.log(i,j);
+                    }
+                    console.log(j,i);
+                }
+            }
+            console.log("Mi Respuesta = undefined");
+
+            var z = 10;
+            function m(){
+                var z = 15;
+                console.log(z);
+            }
+            console.log(z);
+            console.log("Mi Respuesta = 10");
+
+            var z = 10;
+            function n(){
+                var z = 15;
+                console.log(z);
+            }
+            n();
+            console.log(z);
+            console.log("Mi Respuesta = 15, 10");
+
+            var z = 10;
+            function o(){
+                var z = 15;
+                console.log(z);
+                return z;
+            }
+            z = o();
+            console.log(z);
+            console.log("Mi Respuesta = 15, 15");
+
+        </script>
+    </body>
+</html>
