@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fundamentos Basicos 1</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //primer desafio
+            function generarnumeros(x){
+                a = [];
+                for (var i = 1; i <= x; i++) {
+                    a.push(i);
+                };
+                return a;
+            }
+            a = 255;
+            console.log(generarnumeros(a));
+            console.log("Primer desafío: Se genero un Array de " + a.length + " numeros");
+            //segundo desafio
+            function returnSumPar(x){
+                a = 0;
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] % 2 == 0){
+                        a += x[i];
+                    }
+                }
+                return "Segundo desafío: La suma de los numeros pares es " + a;
+            }
+            a = generarnumeros(1000);
+            console.log(returnSumPar(a));
+            //tercero desafio
+            function returnSumimPar(x){
+                a = 0;
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] % 2 != 0){
+                        a += x[i];
+                    }
+                }
+                return "Tercer desafío: La suma de los numeros impares es " + a;
+            }
+            a = generarnumeros(5000);
+            console.log(returnSumimPar(a));
+            //cuarto desafio
+            function returnsum(x){
+                var a = 0;
+                for (var i = 0; i < x.length; i++) {
+                        a += x[i];
+               }
+               return "Cuarto desafío: La suma total es " + a;
+              }
+            a = [1,2,5];
+            console.log(a);
+            console.log(returnsum(a));
+            //quinto desafio
+            function returnmax(x){
+                max = x[0];
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] > max){
+                        max = x[i];
+                    }
+                }
+                a = "Quinto desafío: El maximo es " + max;
+                return a;
+            }
+            a = [-3,3,5,7];
+            console.log(a);
+            console.log(returnmax(a));
+            //Sexto desafio
+            function returnaverage(x){
+                sum = 0;
+                for (var i = 0; i < x.length; i++) {
+                    sum = sum + x[i];
+                }
+                average = sum / x.length;
+                a = "Sexto desafío: El  promedio es " + average;
+                return a;
+            }
+            a = [1,3,5,7,20];
+            console.log(a);
+            console.log(returnaverage(a));
+            //Septimo desafio
+            function arrayimpar(x){
+                a = [];
+                for (var i = 0; i < x.length; i++) {
+                   if (x[i] % 2 != 0){
+                        a.push(x[i]);
+                    }
+                }
+                return a
+            }
+            a = generarnumeros(50);
+            console.log(arrayimpar(a));
+            console.log("Septimo desafío: Se genero un Array de " + a.length + " numeros impares;");
+            //Octavo desafio
+            function mayorqueY(x, z){
+                a = [];
+                for (var i = 0; i < x.length; i++) {
+                        if (x[i] > z) {
+                            a.push(x[i]);
+                        }
+                }
+                return a;
+                }
+            y = 3;
+            a = [1,3,5,7];
+            console.log(mayorqueY(a, y));
+            console.log("Octavo desafío: Hay " + a.length + " numeros mayores que " + y);
+            //Noveno desafio
+            function returncuadrado(x){
+                b = [];
+                for (var i = 0; i < x.length; i++) {
+                    b.push(x[i] * x[i]);
+                }
+                return b;
+                }
+            a = [1,5,10,-2];
+            returncuadrado(a);
+            console.log("Noveno desafío: Los numero al cuadrado de " + a + " son: " + b);
+            //Decimo desafio
+            function returncero(x){
+                for (var i = 0; i < x.length; i++) {
+                        if (x[i] < 0) {
+                            x[i] = 0;
+                        }
+                    }
+                return x;
+                }
+            a = [1,5,10,-2];
+            b = [...a]
+            console.log(returncero(a));
+            console.log("Decimo desafío: " + b + " ahora es " + a);
+            //Onceavo desafio
+            function maxminaverage(x){
+                 min = x[0];
+                 max = x[0];
+                 sum = 0;
+                 for (var i = 0; i < x.length; i++) {
+                     sum = sum + x[i];
+                     if (x[i] < min){
+                         min = x[i];
+                     }
+                     else if (x[i] > max){
+                         max = x[i];
+                     }
+                 }
+                 b = [];
+                 average = sum / x.length;
+                 b.push(max);
+                 b.push(min);
+                 b.push(average);
+                 return b;
+             }
+             y = [1,5,10,-2];
+             console.log(maxminaverage(y));
+             console.log("Onceavo desafío: " + y + " su valor maximo, minimo y promedio es: " + b);
+            //Doceavo desafio
+             function reemplazarnumero(x){
+                 numero = x[0];
+                 x[0] = x[x.length-1];
+                 x[x.length-1] = numero;
+                 return x;
+             }
+            a = [1,5,10,-2];
+            b = [...a]
+            console.log(reemplazarnumero(a));
+            console.log("Doceavo desafío: " + b + " ahora es: " + a);
+            //Treceavo desafio
+            function returndojo(x){
+                for (var i = 0; i < x.length; i++) {
+                        if (x[i] < 0) {
+                            x[i] = "Dojo";
+                        }
+                        
+                }
+                return x
+            }
+            a = [-1,-3,2];
+            b = [...a];
+            console.log(returndojo(a));
+            console.log("Treceavo desafío: " + b + " ahora es " + a);
+        </script>
+    </body>
+</html>
