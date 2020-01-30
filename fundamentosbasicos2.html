@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fundamentos Basicos 2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //primer desafio
+            function returngrande(x){
+                for (var i = 0; i < x.length; i++) {
+                        if (x[i] > 0) {
+                            x[i] = "Grande";
+                        }
+                }
+                return x;
+            }
+            a = [-1,3,5,-5];
+            b = [...a];
+            console.log(returngrande(a));
+            console.log("Primer desafío: " + b + " ahora es " + a);
+            //segundo desafio
+            function maxmin(x){
+                min = x[0];
+                max = x[0];
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] < min){
+                        min = x[i];
+                    }
+                    else if (x[i] > max){
+                        max = x[i];
+                    }
+                }
+                console.log("Segundo desafío: El menor es " + min);
+                return max;
+            }
+            y = [65, 32, -12, 56, 32, -45, 23, 43, -54, 56, 16, -10, 13, 80];
+            e = maxmin(y);
+            console.log("Segundo desafío: El maximo es " + e);
+            //tercer desafio
+            function wolverine(x){
+                penultimo = 0;
+                primerimpar = 0;
+                guardado = true;
+                for (var i = 0; i < x.length; i++) {
+                    if (i == x.length-2){
+                        penultimo = x[i];
+                    }
+                    if (x[i] % 2 != 0 & guardado == true){
+                        primerimpar = x[i];
+                        guardado = false;
+                    }
+                }
+                console.log("Tercer desafío: El penultimo valor es " + penultimo);
+                return primerimpar;
+            }
+            y = [4, 46, -12, 56, 42, -45, 23, 43, -54, 56, 16, -17, 13, 60];
+            e = wolverine(y);
+            console.log("Tercer desafío: El primer impar es " + e);
+            //cuarto desafio
+            function duplicar(x){
+                p = [];
+                for (var i = 0; i < x.length; i++) {
+                    p.push(x[i] * 2);
+                }
+                return p;
+            }
+            y = [1,2,3];
+            e = duplicar(y);
+            console.log("Cuarto desafío: este array " + y + " tienes sus valores duplicados aqui: " + e);
+            //quinto desafio
+            function contarpositivo(x){
+                p = [];
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] >= 0) {
+                        p.push(x[i]);
+                    }
+                }
+                x[x.length - 1] = p.length;
+                return x;
+            }
+            y = [-1,1,1,1];
+            e = [...y];
+            contarpositivo(y);
+            console.log("Quinto desafío: " + e + " ahora es: " + y);
+            //Sexto desafio
+            console.log("Sexto desafío:");
+            function parimpar(x){
+                par = 0;
+                impar = 0;
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] % 2 == 0) {
+                        par++;
+                        impar = 0;
+                        if (par == 3) {
+                            console.log("¡Es para bien!");
+                            par = 0;
+                        }
+                    } else {
+                        impar++;
+                        par = 0;
+                        if (impar == 3) {
+                            console.log("¡Qué imparcial!");
+                            impar = 0;
+                        }
+                    }
+                }
+            }
+            y = [4, 10, -12, 3, 42, -45, 15, 5, -54, 56, 60];
+            parimpar(y);
+            //Septimo desafio
+            console.log("Septimo desafío:");
+            function transformtopar(x){
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] % 2 != 0) {
+                        x[i] ++;
+                        console.log(x[i]);
+                    } else {
+                        console.log(x[i]);
+                        
+                    }
+                }
+                return x;
+            }
+            y = [4, 10, -12, 3, 42, -45, 15, 5, -54, 56, 60];
+            console.log(transformtopar(y));
+            //Octavo desafio
+            function kakarotto(x){
+                for (var i = x.length - 1; i > 0; i--) {
+                    x[i] = x[i-1].length;
+                }
+                return x;
+            }
+            y = ["programar","dojo","genial"];
+            b = [...y]
+            console.log(kakarotto(y));
+            console.log("Octavo desafío: " + b + " ahora es " + y);
+             //Noveno desafio
+             function massiete(x){
+                s = [];
+                for (var i = 0; i < x.length; i++) {
+                    s.push(x[i] + 7);
+                }
+                return s;
+            }
+            t = [1,2,3];
+            console.log(massiete(t));
+            console.log("Noveno desafío: " + t + " se le sumo 7 y ahora es " + s);
+            //Decimo desafio
+            function invertir(x){
+                z = 0;
+                for (var i = 0; i < x.length/2; i++) {
+                    z = x[i];
+                    x[i] = x[x.length - (i+1)];
+                    x[x.length - (i+1)] = z;
+                }
+                return x;
+            }
+            a = [3,1,6,4,2];
+            b = [...a];
+            console.log(invertir(a));
+            console.log("Decimo desafío: " + b + " se invertio y ahora es " + a);
+            //decimoprimero desafio
+            function negativo(x){
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] > 0) {
+                        x[i] = x[i] - x[i] * 2;
+                    }
+                }
+                return x;
+            }
+            t = [1,-3,5];
+            b = [...t];
+            console.log(negativo(t));
+            console.log("Decimoprimero desafío: " + b + " paso todo a negativo y ahora es " + t);
+            //Decimosegundo desafio
+            console.log("Decimosegundo desafío: ");
+            function comida(x){
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i] == "comida") {
+                        console.log("Yummy");
+                    } else {
+                        console.log("¡Tengo hambre!");
+                    }
+                }
+            }
+            y = [4, "comida", -12, 3, 42, "comida", 15, 5, -54, "comida", 60];
+            comida(y);
+            //Decimotercer desafio
+            console.log("Decimotercer desafío: ");
+            function castlevania(x){
+                count = 0;
+                for (var i = 0; i < x.length/2; i++) {
+                    if (count == 0) {
+                        valor = x[i];
+                        x[i] = x[x.length - (i+1)];
+                        x[x.length - (i+1)] = valor;
+                        count++;
+                    } else {
+                        count--;
+                    }
+                }
+                console.log("Ahora es: " + x);
+            }
+            a = [1,2,3,4,5,6];
+            console.log(a);
+            castlevania(a);
+            //Decimocuarto desafio
+            function multiplicador(x, z){
+                for (var i = 0; i < x.length; i++) {
+                    x[i] = x[i] * z;
+                }
+                return x
+            }
+            y = [4, 10, -12, 3, 42, -45, 15, 5, -54, 56, 60];
+            a = 3;
+            b = [...y];
+            console.log(multiplicador(y, a));
+            console.log("Decimocuarto desafío: " + b + " fue multiplicado por " + a + " y ahora es: " + y);
+        </script>
+    </body>
+</html>
