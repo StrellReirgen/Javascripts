@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fundamentos Intermedios</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //primer desafio
+            console.log("Primer desafio: la función Sigma");
+            cantidad = 5;
+            function sigma(x){
+            	a = [];
+            	for (i = 1; i <= x; i++) {
+            		a.push(i);
+        		};
+        		sum = 0;
+        		for (e = 0; e < a.length; e++) {
+        			sum = sum + a[e];
+    			};
+    			return sum;
+            };
+            console.log(sigma(cantidad));
+            //Segundo desafio
+            console.log("Segundo desafio: la función Factorial");
+            cantidad = 5;
+            function factorial(x){
+            	a = [];
+            	for (i = 1; i <= x; i++) {
+            		a.push(i);
+        		};
+        		multi = 1;
+        		for (e = 0; e < a.length; e++) {
+        			multi = multi * a[e];
+    			};
+    			return multi;
+            };
+            console.log(factorial(cantidad));
+            //Tercer Desafio
+            console.log("Tercer desafio: la función Fibonacci");
+            cantidad = 7;
+            function fibonacci(x){
+                keep = [0,0];
+                for (i = 0; i <= x; i++) {
+                    if (i >  1){
+                        sum = keep[0] + keep[1];
+                        console.log(sum);
+                        keep[0] = keep[1];
+                        keep[1] = sum;
+
+                    } else {
+                        if (i == 1) {
+                            keep[1] = i;
+                        };
+                        console.log(i);
+                    }
+                };
+
+            }
+            fibonacci(cantidad);
+            //Cuarto Desafio
+            console.log("Cuarto desafio: la función penultimo");
+            arreglo = [42,true,4,"Liam", 7];
+            function penultimo(x){
+                if (x.length - 2 >= 0) {
+                    a = x[x.length - 2];
+                    return a;
+                } else {
+                    return null;
+                }
+            }
+            console.log(penultimo(arreglo));
+            console.log(penultimo(5));
+            //Quinto Desafio
+            console.log("Quinto desafio: la función “N” último");
+            arreglo = [5,2,3,6,4,9,7];
+            function numultimo(x, b){
+                if ((x.length-1) - b >= 0){
+                    valor = x[x.length - b];
+                    return valor;
+                } else {
+                    return null;
+                }
+
+            }
+            console.log(numultimo(arreglo, 3));
+            console.log(numultimo(4, 3));
+            //Sexto Desafio
+            console.log("Sexto desafio: la función Segundo más grande");
+            arreglo = [42,1,4,3.14,7];
+            function segundon(x){
+                mayor = 0;
+                for (var i = 0; i < x.length; i++) {
+                   if (mayor < x[i]) {
+                    mayor = x[i];
+                   };
+                };
+                segundon = 0;
+                for (var i = 0; i < x.length; i++) {
+                    if (segundon < x[i] & x[i] != mayor){
+                        segundon = x[i];
+                    };
+
+                };
+                return segundon;
+            }
+            console.log(segundon(arreglo));
+        </script>
+    </body>
+</html>
