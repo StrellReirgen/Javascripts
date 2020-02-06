@@ -1,0 +1,95 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body {
+	background-color: black;
+}
+div.row{
+	height: 32px;
+}
+
+div.row div{
+ width: 32px;
+ height: 32px;
+ display: inline-block;
+}
+
+div.block {
+	background: url("brick.png");
+}
+
+div.empty {
+}
+
+div.uranium{
+	background: url("uranium.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div#pukman{
+	background: url("pukmanright.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+}
+div#pukman2{
+	background: url("pukman2right.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+}
+
+div#score{
+	border: 1px solid green;
+	width: 30px;
+	height: 30px;
+	color: green;
+	padding: 7px;
+	text-align: center;
+	margin-top: 30px;
+	display: inline-block;
+}
+div#score2{
+	border: 1px solid purple;
+	width: 30px;
+	height: 30px;
+	color: purple;
+	padding: 7px;
+	text-align: center;
+	margin-top: 30px;
+	display: inline-block;
+}
+div.nucleo{
+	background: url("nucleo.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+div#enemy{
+	background: url("enemy.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+}
+
+div#life{
+	border: 1px solid red;
+	width: 30px;
+	height: 30px;
+	color: red;
+	padding: 7px;
+	text-align: center;
+	margin-top: 30px;
+}
